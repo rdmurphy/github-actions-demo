@@ -9,7 +9,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v1
+    - name: Checkout the repo
+      uses: actions/checkout@v1
     - name: Use Node.js 10.x
       uses: actions/setup-node@v1
       with:
@@ -20,3 +21,9 @@ jobs:
         npm run build --if-present
       env:
         CI: true
+    - name: Deploy action for GitHub Pages
+      uses: peaceiris/actions-gh-pages@v2
+      env:
+        PERSONAL_TOKEN: ${{ secrets.PERSONAL_TOKEN }}
+        PUBLISH_BRANCH: gh-pages
+        PUBLISH_DIR: ./_dist
