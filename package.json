@@ -1,7 +1,7 @@
 {
   "private": true,
   "scripts": {
-    "build": "NODE_ENV=production bake build"
+    "build": "NODE_ENV=production bake build --pathPrefix github-actions-demo"
   },
   "devDependencies": {
     "@datadesk/baker": "^0.5.0",
