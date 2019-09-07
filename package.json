@@ -1,0 +1,12 @@
+{
+  "private": true,
+  "scripts": {
+    "build": "NODE_ENV=production bake build"
+  },
+  "devDependencies": {
+    "@datadesk/baker": "^0.5.0",
+    "@datadesk/prettier-config": "^1.0.0",
+    "prettier": "^1.18.2"
+  },
+  "prettier": "@datadesk/prettier-config"
+}
